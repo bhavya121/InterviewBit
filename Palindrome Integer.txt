@@ -1,0 +1,35 @@
+Determine whether an integer is a palindrome. Do this without extra space.
+
+A palindrome integer is an integer x for which reverse(x) = x where reverse(x) is x with its digit reversed.
+Negative numbers are not palindromic.
+
+Example :
+
+Input : 12121
+Output : True
+
+Input : 123
+Output : False
+*/
+
+/**
+ * @input A : Integer
+ * 
+ * @Output Integer
+ */
+int isPalindrome(int A) {
+    int r=0;
+    int N=A;
+    while(N!=0)
+    {
+        int rem=N%10;
+        r=r*10+rem;
+        N=N/10;
+    }
+    if(A<0)
+    return 0;
+    else if(A==r)
+    return 1;
+    else
+    return 0;
+}
